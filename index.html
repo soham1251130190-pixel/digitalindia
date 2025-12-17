@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Empower - India's Digital Future</title>
+  <meta name="description"
+    content="Digital Empower is a modern initiative-inspired experience that showcases how digital innovation is transforming lives across India." />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- PERF: Preload critical CSS to speed up first paint (browser can start fetching earlier). -->
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Skip to main content link for keyboard navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="nav-inner container">
+        <a href="#home" class="nav-logo" aria-label="Digital Empower home">
+          <span class="nav-logo-mark">DE</span>
+          <span class="nav-logo-text">Digital Empower</span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="primary-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <ul id="primary-nav" class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#initiatives">Initiatives</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="hero-gradient"></div>
+      <div class="hero-content container">
+        <div class="hero-text reveal-on-scroll">
+          <p class="eyebrow">Digital journeys, human stories</p>
+          <h1>Empowering India Through Digital Innovation</h1>
+          <p class="hero-subtitle">
+            From metros to remote villages, Digital Empower brings tools, skills, and opportunities to help every
+            citizen thrive in a connected world.
+          </p>
+          <div class="hero-actions">
+            <a href="#initiatives" class="btn btn-primary">Explore Initiatives</a>
+            <a href="#stories" class="btn btn-ghost">Success Stories</a>
+          </div>
+          <p class="hero-meta">
+            Built for learners, dreamers, and changemakers across India.
+          </p>
+        </div>
+
+        <div class="hero-visual reveal-on-scroll" aria-hidden="true">
+          <div class="hero-card">
+            <div class="hero-card-badge">Live impact</div>
+            <div class="hero-card-metric">
+              <span class="hero-card-number">1.2B+</span>
+              <span class="hero-card-label">citizens online</span>
+            </div>
+            <div class="hero-card-row">
+              <span class="hero-dot hero-dot-blue"></span>
+              <span>Smart cities, classrooms, and communities growing every day.</span>
+            </div>
+          </div>
+
+          <!-- Floating shapes -->
+          <span class="shape shape-one"></span>
+          <span class="shape shape-two"></span>
+          <span class="shape shape-three"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT STATISTICS SECTION -->
+    <section id="about" class="section impact">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <h2>Digital Impact Across India</h2>
+          <p>Real numbers, real people. A snapshot of how digital innovation is touching lives.</p>
+        </header>
+
+        <div class="impact-grid reveal-on-scroll">
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">🌐</div>
+            <h3>Citizens Connected</h3>
+            <p class="stat-value">
+              <span class="counter" data-target="1200000000">0</span>+
+            </p>
+            <p class="stat-label">accessing digital platforms and services</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">🏙️</div>
+            <h3>Smart Cities</h3>
+            <p class="stat-value">
+              <span class="counter" data-target="700">0</span>+
+            </p>
+            <p class="stat-label">transforming urban life with data and connectivity</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">📱</div>
+            <h3>Digital Services</h3>
+            <p class="stat-value">
+              <span class="counter" data-target="10000">0</span>+
+            </p>
+            <p class="stat-label">touchpoints for citizens, businesses, and communities</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">🎓</div>
+            <h3>Students Empowered</h3>
+            <p class="stat-value">
+              <span class="counter" data-target="5000000">0</span>+
+            </p>
+            <p class="stat-label">building skills for tomorrow’s digital careers</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED INITIATIVES PREVIEW -->
+    <section id="initiatives" class="section initiatives">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <h2>Featured Digital Initiatives</h2>
+          <p>Discover how digital tools are reshaping learning, health, finance, and connectivity.</p>
+        </header>
+
+        <div class="initiatives-grid reveal-on-scroll">
+          <article class="card initiative-card">
+            <div class="card-icon" aria-hidden="true">📚</div>
+            <h3>Digital Education</h3>
+            <p>Interactive platforms, local language content, and skill-building programs for every learner.</p>
+            <a href="#initiatives" class="card-link">Learn More →</a>
+          </article>
+
+          <article class="card initiative-card">
+            <div class="card-icon" aria-hidden="true">💊</div>
+            <h3>Smart Healthcare</h3>
+            <p>Telemedicine, e-records, and AI-driven tools to make quality care more accessible.</p>
+            <a href="#initiatives" class="card-link">Learn More →</a>
+          </article>
+
+          <article class="card initiative-card">
+            <div class="card-icon" aria-hidden="true">💳</div>
+            <h3>Digital Payments</h3>
+            <p>Secure, instant payments that make every transaction simpler — from kirana stores to startups.</p>
+            <a href="#initiatives" class="card-link">Learn More →</a>
+          </article>
+
+          <article class="card initiative-card">
+            <div class="card-icon" aria-hidden="true">📡</div>
+            <h3>Rural Connectivity</h3>
+            <p>High-speed internet and shared digital hubs unlocking new opportunities in rural India.</p>
+            <a href="#initiatives" class="card-link">Learn More →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IS THIS FOR? SECTION -->
+    <section id="resources" class="section audience">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <h2>Who Is Digital Empower For?</h2>
+          <p>Designed for every Indian who wants to learn, build, or simply stay connected.</p>
+        </header>
+
+        <div class="audience-grid reveal-on-scroll">
+          <article class="card audience-card">
+            <div class="card-icon" aria-hidden="true">🎓</div>
+            <h3>Students</h3>
+            <p>Access free learning resources, online courses, and mentorship communities.</p>
+          </article>
+
+          <article class="card audience-card">
+            <div class="card-icon" aria-hidden="true">🚀</div>
+            <h3>Entrepreneurs</h3>
+            <p>Discover tools, grants, and networks to launch and grow your digital-first business.</p>
+          </article>
+
+          <article class="card audience-card">
+            <div class="card-icon" aria-hidden="true">🌾</div>
+            <h3>Rural Citizens</h3>
+            <p>Find services, information, and local language support closer to your village.</p>
+          </article>
+
+          <article class="card audience-card">
+            <div class="card-icon" aria-hidden="true">🤝</div>
+            <h3>Senior Citizens</h3>
+            <p>Stay connected with family, access telehealth, and learn digital basics safely.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUCCESS STORY HIGHLIGHT -->
+    <section id="stories" class="section story">
+      <div class="container story-layout reveal-on-scroll">
+        <div class="story-media">
+          <!-- Placeholder image with accessible label -->
+          <div class="story-image" role="img"
+            aria-label="A student learning with a laptop in a digital classroom"></div>
+        </div>
+        <div class="story-content">
+          <p class="eyebrow">Success Story</p>
+          <h2>“A small village classroom, now connected to the world.”</h2>
+          <p>
+            In a remote school in Maharashtra, students once shared a single textbook. Today, they join live
+            sessions with mentors across India, explore interactive science labs online, and dream bigger than
+            ever before — all thanks to affordable devices and reliable connectivity.
+          </p>
+          <p class="story-quote-author">– Asha, Class 10 Student</p>
+          <a href="#stories" class="btn btn-outline">Read More Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST UPDATES (PREVIEW) -->
+    <section class="section updates">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <h2>Latest Updates</h2>
+          <p>Stay in sync with new programs, resources, and stories from across the country.</p>
+        </header>
+
+        <div class="updates-grid reveal-on-scroll">
+          <article class="card update-card">
+            <time class="update-date" datetime="2025-12-02">Dec 02, 2025</time>
+            <h3>New Digital Skills Bootcamps for Tier-2 Cities</h3>
+            <p>
+              Intensive 6-week programs launch in 12 cities to help young professionals upskill in AI, design, and
+              product management.
+            </p>
+          </article>
+
+          <article class="card update-card">
+            <time class="update-date" datetime="2025-11-24">Nov 24, 2025</time>
+            <h3>Rural Innovation Labs Cross 1,000 Milestone</h3>
+            <p>
+              Community-driven labs are enabling local entrepreneurs to prototype, test, and launch digital
+              solutions faster.
+            </p>
+          </article>
+
+          <article class="card update-card">
+            <time class="update-date" datetime="2025-11-10">Nov 10, 2025</time>
+            <h3>Accessible Design Toolkit Released in 8 Languages</h3>
+            <p>
+              A new open toolkit helps creators build inclusive digital products for people of all abilities.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION SECTION -->
+    <section class="section cta">
+      <div class="cta-inner container reveal-on-scroll">
+        <h2>Be a Part of India’s Digital Future</h2>
+        <p>
+          Whether you’re learning your first digital skill or building the next big solution, your journey
+          matters. Start today.
+        </p>
+        <a href="#contact" class="btn btn-light">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-section">
+        <h3>Digital Empower</h3>
+        <p>
+          A people-first digital experience that inspires, informs, and connects India’s next billion users.
+        </p>
+      </div>
+
+      <nav class="footer-section" aria-label="Footer navigation">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#initiatives">Initiatives</a></li>
+          <li><a href="#stories">Stories</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-section" aria-label="Social media links">
+        <h4>Connect</h4>
+        <ul class="footer-links footer-social">
+          <li><a href="#" aria-label="Visit our community space">Community</a></li>
+          <li><a href="#" aria-label="Follow on X/Twitter">X / Twitter</a></li>
+          <li><a href="#" aria-label="Follow on Instagram">Instagram</a></li>
+          <li><a href="#" aria-label="Follow on LinkedIn">LinkedIn</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-section" aria-label="Accessibility resources">
+        <h4>Accessibility</h4>
+        <ul class="footer-links">
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">Language Support</a></li>
+          <li><a href="#">Report an Issue</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Digital Empower. All rights reserved.</p>
+      <a href="#main-content" class="back-to-top" aria-label="Back to top">
+        ↑ Back to top
+      </a>
+    </div>
+  </footer>
+
+  <!-- PERF: Defer JS so HTML/CSS can render first; script executes after parsing. -->
+  <script src="main.js" defer></script>
+</body>
+
+</html>
+
+
