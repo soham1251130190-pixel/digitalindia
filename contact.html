@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Digital Empower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+
+    .site-header {
+      z-index: 100;
+      background: rgba(11,15,25,0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar {
+      padding: 0.2rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .nav-logo {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      font-weight: 600;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo-mark {
+      background: #4f46e5;
+      color: #fff;
+      padding: .4rem .6rem;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      opacity: .8;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      opacity: 1;
+      color: #8b9cff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    /* Hero background */
+    .contact-hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, #2563eb, transparent 60%),
+        radial-gradient(circle at bottom left, #9333ea, transparent 60%);
+      z-index: -1;
+    }
+
+    /* Layout */
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 12px 0;
+    }
+
+    .subtitle {
+      color: #cbd5f5;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .contact-info p {
+      margin-bottom: 12px;
+      color: #e5e7eb;
+    }
+
+    /* Form card */
+    .contact-form-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-form-card h2 {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      background: #0f172a;
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      color: #ffffff;
+    }
+
+    #error-msg {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DE</span>
+        <span class="nav-logo-text">Digital Empower</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="contact-hero">
+  <div class="hero-gradient"></div>
+  <div class="container contact-container">
+    <div>
+      <p class="eyebrow">Let’s Connect</p>
+      <h1>Contact Us</h1>
+      <p class="subtitle">
+        Have questions, ideas, or want to collaborate with us?
+        Get in touch and be part of India’s digital transformation journey.
+      </p>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> support@digitalempower.in</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Location:</strong> New Delhi, India</p>
+      </div>
+    </div>
+    <div class="contact-form-card">
+      <h2>Send a Message</h2>
+
+      <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <input type="text" id="subject" placeholder="Subject">
+        <textarea id="message" placeholder="Your Message"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="error-msg"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<script>
+  function validateForm() {
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var subject = document.getElementById("subject").value.trim();
+    var message = document.getElementById("message").value.trim();
+    var error = document.getElementById("error-msg");
+
+    if (name === "" || email === "" || subject === "" || message === "") {
+      error.style.color = "#f87171";
+      error.innerHTML = "⚠️ Please fill all fields.";
+      return false;
+    }
+
+    if (!email.includes("@") || !email.includes(".")) {
+      error.style.color = "#f87171";
+      error.innerHTML = "⚠️ Please enter a valid email address.";
+      return false;
+    }
+
+    error.style.color = "#4ade80";
+    error.innerHTML = "✅ Message sent successfully!";
+    return false; // client-side only (no backend)
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stories | Digital Empower</title>
+  <link rel="stylesheet" href="./style2.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DE</span>
+        <span class="nav-logo-text">Digital Empower</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="story.html" class="active">Stories</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-gradient"></div>
+  <div class="hero-content container">
+    <div class="hero-text">
+      <p class="eyebrow">Real Impact • Real People</p>
+      <h1>Success Stories</h1>
+      <p class="hero-subtitle">
+        Discover how digital access, skills, and innovation are transforming
+        lives across India.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container initiatives-grid">
+    <article class="card initiative-card">
+      <img src="./images/story1.jpg" class="card-img" alt="Smart farming">
+      <h3>Smart Farming Revolution</h3>
+      <p>Farmers use mobile apps for weather, soil health, and market prices.</p>
+
+      <button class="card-link"
+        onclick="openStory(
+          'Smart Farming Revolution',
+          'Farmers across rural India now use mobile apps for real-time weather forecasts, soil analysis, crop advisory services, and market prices. These tools improve yield and income stability.',
+          './images/story1.jpg'
+        )">
+        Read more →
+      </button>
+    </article>
+    <article class="card initiative-card">
+      <img src="./images/story2.jpg" class="card-img" alt="Women entrepreneurs">
+      <h3>Women Entrepreneurs Go Digital</h3>
+      <p>Self-help groups use e-commerce to sell products nationwide.</p>
+
+      <button class="card-link"
+        onclick="openStory(
+          'Women Entrepreneurs Go Digital',
+          'Women-led self-help groups are adopting e-commerce platforms and digital payments to reach customers across India, increasing income and independence.',
+          './images/story2.jpg'
+        )">
+        Read more →
+      </button>
+    </article>
+    <article class="card initiative-card">
+      <img src="./images/story3.jpg" class="card-img" alt="Online learners">
+      <h3>First-Generation Online Learners</h3>
+      <p>Students from rural areas access free digital education.</p>
+
+      <button class="card-link"
+        onclick="openStory(
+          'First-Generation Online Learners',
+          'Students from rural backgrounds are enrolling in online courses, certifications, and digital skill programs, opening new career opportunities.',
+          './images/story3.jpg'
+        )">
+        Read more →
+      </button>
+    </article>
+
+  </div>
+</section>
+</main>
+<div class="modal" id="storyModal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeStory()">&times;</span>
+
+    <img id="modalImage" src="" alt="Story image">
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<script src="./main2.js"></script>
+</body>
+</html>

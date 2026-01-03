@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | Digital Empower</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DE</span>
+        <span class="nav-logo-text">Digital Empower</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-gradient"></div>
+  <div class="hero-content container">
+    <div class="hero-text reveal-on-scroll">
+      <p class="eyebrow">Latest Announcements</p>
+      <h1>News & Updates</h1>
+      <p class="hero-subtitle">
+        Stay informed about national digital initiatives and milestones.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="section updates">
+  <div class="container">
+    <header class="section-header reveal-on-scroll">
+      <h2>Recent News</h2>
+      <p>What's happening across India's digital ecosystem.</p>
+    </header>
+    <div class="updates-grid reveal-on-scroll">
+      <article class="card update-card">
+        <time class="update-date">Nov 24, 2025</time>
+        <h3>Rural Innovation Labs Cross 1,000 Locations</h3>
+        <p>Community labs empower rural entrepreneurs with digital tools.</p>
+        <button class="card-link"
+          onclick="openNews(
+            'Rural Innovation Labs Cross 1,000 Locations',
+            'Nov 24, 2025',
+            'India has successfully crossed 1,000 Rural Innovation Labs nationwide. These labs provide access to computers, high-speed internet, prototyping tools, and mentorship. Rural entrepreneurs are now building digital solutions, startups, and community services, boosting employment and innovation at the grassroots level.'
+          )">
+          Read more →
+        </button>
+      </article>
+      <article class="card update-card">
+        <time class="update-date">Nov 10, 2025</time>
+        <h3>Accessible Design Toolkit Released</h3>
+        <p>Open-source toolkit launched in 8 Indian languages.</p>
+        <button class="card-link"
+          onclick="openNews(
+            'Accessible Design Toolkit Released',
+            'Nov 10, 2025',
+            'A government-backed open-source design toolkit has been released in eight Indian languages. It helps developers and designers build inclusive digital platforms for people with disabilities, elderly users, and low-literacy communities.'
+          )">
+          Read more →
+        </button>
+      </article>
+      <article class="card update-card">
+        <time class="update-date">Oct 28, 2025</time>
+        <h3>National Digital Literacy Drive Expanded</h3>
+        <p>Program extended to senior citizens and rural youth.</p>
+        <button class="card-link"
+          onclick="openNews(
+            'National Digital Literacy Drive Expanded',
+            'Oct 28, 2025',
+            'The Digital Literacy Drive now includes senior citizens and rural youth. Training covers smartphone usage, online safety, digital payments, and access to government e-services, ensuring no citizen is left behind.'
+          )">
+          Read more →
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+</main>
+<div class="modal" id="newsModal">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeNews()">&times;</span>
+
+    <h2 id="newsTitle"></h2>
+    <p class="update-date" id="newsDate"></p>
+
+    <p id="newsText"></p>
+  </div>
+</div>
+
+<script src="main2.js"></script>
+<script>
+  function openNews(title, date, text) {
+    document.getElementById("newsTitle").innerText = title;
+    document.getElementById("newsDate").innerText = date;
+    document.getElementById("newsText").innerText = text;
+    document.getElementById("newsModal").style.display = "flex";
+  }
+
+  function closeNews() {
+    document.getElementById("newsModal").style.display = "none";
+  }
+
+  window.onclick = function (e) {
+    const modal = document.getElementById("newsModal");
+    if (e.target === modal) {
+      closeNews();
+    }
+  };
+</script>
+
+</body>
+</html>

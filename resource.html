@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resources | Digital Empower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+
+    .site-header {
+      z-index: 100;
+      background: rgba(11,15,25,0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar {
+      padding: 0.5 rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .nav-logo {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      font-weight: 600;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo-mark {
+      background: #4f46e5;
+      color: #fff;
+      padding: .4rem .6rem;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      opacity: .8;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      opacity: 1;
+      color: #8b9cff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    /* Background gradient */
+    .resources-hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, #2563eb, transparent 60%),
+        radial-gradient(circle at bottom left, #9333ea, transparent 60%);
+      z-index: -1;
+    }
+
+    .eyebrow {
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 12px 0;
+    }
+
+    .subtitle {
+      color: #cbd5f5;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    /* Resource cards */
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .resource-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .resource-card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .resource-card p {
+      color: #e5e7eb;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      color: #ffffff;
+    }
+
+    /* Filter buttons */
+    .filters {
+      margin-bottom: 40px;
+    }
+
+    .filters button {
+      margin: 6px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      background: #0f172a;
+      color: #93c5fd;
+    }
+
+    .filters button.active {
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DE</span>
+        <span class="nav-logo-text">Digital Empower</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="resource.html" class="active">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="resources-hero">
+  <div class="hero-gradient"></div>
+  <div class="container">
+    <p class="eyebrow">Knowledge Hub</p>
+    <h1>Digital Resources</h1>
+    <p class="subtitle">
+      Explore curated learning resources, government initiatives, and tools
+      designed to empower citizens with digital skills across India.
+    </p>
+    <div class="filters">
+      <button class="active" onclick="filterResources('all', this)">All</button>
+      <button onclick="filterResources('learning', this)">Learning</button>
+      <button onclick="filterResources('tools', this)">Tools</button>
+      <button onclick="filterResources('initiatives', this)">Initiatives</button>
+    </div>
+
+    <!-- Resource cards -->
+    <div class="resource-grid">
+      <div class="resource-card learning">
+        <h3>Digital Literacy Courses</h3>
+        <p>
+          Free online courses to improve basic computer skills, internet usage,
+          and online safety for all age groups.
+        </p>
+        <a href="#" class="btn btn-primary">Explore</a>
+      </div>
+
+      <div class="resource-card initiatives">
+        <h3>Digital India Initiative</h3>
+        <p>
+          Government of India programs promoting digital infrastructure,
+          e-governance, and digital empowerment.
+        </p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+
+      <div class="resource-card tools">
+        <h3>Online Services Portal</h3>
+        <p>
+          Access essential services like Aadhaar, PAN, DigiLocker, and other
+          citizen-centric platforms.
+        </p>
+        <a href="#" class="btn btn-primary">Visit</a>
+      </div>
+
+      <div class="resource-card learning">
+        <h3>Skill Development Programs</h3>
+        <p>
+          Technical and vocational training programs aimed at building a
+          future-ready workforce.
+        </p>
+        <a href="#" class="btn btn-primary">View Programs</a>
+      </div>
+
+      <div class="resource-card initiatives">
+        <h3>Smart Cities Mission</h3>
+        <p>
+          Initiatives to improve urban infrastructure using smart digital
+          solutions and data-driven governance.
+        </p>
+        <a href="#" class="btn btn-primary">Discover</a>
+      </div>
+
+      <div class="resource-card tools">
+        <h3>Cyber Safety Toolkit</h3>
+        <p>
+          Guides and tools to help citizens stay safe from cyber threats and
+          online frauds.
+        </p>
+        <a href="#" class="btn btn-primary">Access</a>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  function filterResources(category, btn) {
+    var cards = document.querySelectorAll(".resource-card");
+    var buttons = document.querySelectorAll(".filters button");
+
+    buttons.forEach(function (b) {
+      b.classList.remove("active");
+    });
+    btn.classList.add("active");
+
+    cards.forEach(function (card) {
+      if (category === "all" || card.classList.contains(category)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+
+</body>
+</html>

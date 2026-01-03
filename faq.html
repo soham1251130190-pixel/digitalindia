@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ | Digital Empower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0b0f1a;
+      color: #ffffff;
+    }
+
+    .site-header {
+      z-index: 100;
+      background: rgba(11,15,25,0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .navbar {
+      padding: 0.2rem 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .nav-logo {
+      display: flex;
+      gap: .5rem;
+      align-items: center;
+      font-weight: 600;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-logo-mark {
+      background: #4f46e5;
+      color: #fff;
+      padding: .4rem .6rem;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      opacity: .8;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      opacity: 1;
+      color: #8b9cff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    /* Background */
+    .faq-hero {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, #2563eb, transparent 60%),
+        radial-gradient(circle at bottom left, #9333ea, transparent 60%);
+      z-index: -1;
+    }
+
+    .eyebrow {
+      color: #93c5fd;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 12px 0 20px;
+    }
+
+    .subtitle {
+      color: #cbd5f5;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-bottom: 50px;
+    }
+
+    /* FAQ items */
+    .faq-item {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px 26px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .faq-question span {
+      font-size: 26px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-answer {
+      padding: 0 26px;
+      max-height: 0;
+      overflow: hidden;
+      color: #e5e7eb;
+      line-height: 1.6;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 0 26px 22px;
+    }
+
+    .faq-item.active .faq-question span {
+      transform: rotate(45deg);
+    }
+
+    /* CTA */
+    .faq-cta {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 38px;
+      }
+
+      .faq-question {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <nav class="navbar">
+    <div class="nav-inner container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">DE</span>
+        <span class="nav-logo-text">Digital Empower</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_us.html">About</a></li>
+        <li><a href="story.html">Stories</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="resource.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<section class="faq-hero">
+  <div class="hero-gradient"></div>
+  <div class="container">
+    <p class="eyebrow">Help Center</p>
+    <h1>Frequently Asked Questions</h1>
+    <p class="subtitle">
+      Find quick answers to common questions about Digital Empower,
+      our initiatives, and how citizens can benefit from digital services.
+    </p>
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        What is Digital Empower?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Digital Empower is an initiative aimed at providing digital tools,
+        skills, and opportunities to citizens across India to promote
+        inclusive digital growth.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        Who can use Digital Empower resources?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Students, professionals, entrepreneurs, rural citizens, and anyone
+        interested in improving digital literacy can use our resources.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        Are the learning resources free?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, most of the digital literacy courses and resources are freely
+        accessible to ensure equal opportunities for all citizens.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        How does this platform support Digital India?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        The platform aligns with the Digital India mission by promoting
+        e-governance, digital infrastructure, and digital empowerment
+        nationwide.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFAQ(this)">
+        How can I contact the Digital Empower team?
+        <span>+</span>
+      </div>
+      <div class="faq-answer">
+        You can reach us through the Contact page by submitting the form,
+        and our team will respond as soon as possible.
+      </div>
+    </div>
+    <div class="faq-cta">
+      <a href="contact.html" class="btn btn-primary">Still have questions? Contact Us</a>
+    </div>
+  </div>
+</section>
+<script>
+  function toggleFAQ(element) {
+    var item = element.parentElement;
+    item.classList.toggle("active");
+  }
+</script>
+
+</body>
+</html>
