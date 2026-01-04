@@ -1,20 +1,12 @@
-// main.js
-// Handles navigation, smooth scrolling, animated counters, and scroll-based animations
-
 document.addEventListener("DOMContentLoaded", () => {
   setupCurrentYear();
   setupMobileNav();
-  // PERF: Smooth scrolling is handled by CSS (`scroll-behavior`) and `scroll-margin-top` offsets.
-  // Keeping this in CSS avoids adding click listeners for every internal link.
   setupNavbarOnScroll();
   setupScrollReveal();
   setupCounters();
   setupBackToTop();
 });
 
-/**
- * Updates footer year automatically
- */
 function setupCurrentYear() {
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
@@ -22,9 +14,6 @@ function setupCurrentYear() {
   }
 }
 
-/**
- * Mobile navigation toggle
- */
 function setupMobileNav() {
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.getElementById("primary-nav");
@@ -37,7 +26,6 @@ function setupMobileNav() {
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
 
-  // Close mobile menu when link is clicked
   navLinks.addEventListener("click", (event) => {
     const target = event.target;
     if (target instanceof HTMLAnchorElement && navLinks.classList.contains("open")) {
@@ -48,9 +36,6 @@ function setupMobileNav() {
   });
 }
 
-/**
- * Adds a background + shadow to navbar after scrolling
- */
 function setupNavbarOnScroll() {
   const navbar = document.querySelector(".navbar");
   if (!navbar) return;
@@ -64,17 +49,12 @@ function setupNavbarOnScroll() {
   };
 
   window.addEventListener("scroll", handleScroll, { passive: true });
-  // Initial check
   handleScroll();
 }
 
-/**
- * Reveals elements with .reveal-on-scroll using IntersectionObserver
- */
 function setupScrollReveal() {
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
   if (!("IntersectionObserver" in window) || revealElements.length === 0) {
-    // Fallback: show all
     revealElements.forEach((el) => el.classList.add("in-view"));
     return;
   }
@@ -97,9 +77,6 @@ function setupScrollReveal() {
   revealElements.forEach((el) => observer.observe(el));
 }
 
-/**
- * Count-up animation for stats cards
- */
 function setupCounters() {
   const counters = document.querySelectorAll(".counter");
   if (counters.length === 0) return;
@@ -139,7 +116,7 @@ function setupCounters() {
     if (hasAnimated) return;
     hasAnimated = true;
 
-    const duration = 1600; // ms
+    const duration = 1600;
     const startTime = performance.now();
 
     const step = (now) => {
@@ -162,7 +139,6 @@ function setupCounters() {
     requestAnimationFrame(step);
   };
 
-  // Trigger counters when impact section is visible
   const impactSection = document.querySelector(".impact");
   if (!impactSection) {
     animateCounters();
@@ -183,23 +159,14 @@ function setupCounters() {
     );
     observer.observe(impactSection);
   } else {
-    // Fallback: animate on load
     animateCounters();
   }
 }
 
-/**
- * Easing function for smoother counter animation
- * @param {number} t - progress between 0 and 1
- * @returns {number}
- */
 function easeOutQuad(t) {
   return t * (2 - t);
 }
 
-/**
- * Back to top button
- */
 function setupBackToTop() {
   const backToTopBtn = document.querySelector(".back-to-top");
   if (!backToTopBtn) return;
@@ -213,8 +180,5 @@ function setupBackToTop() {
   };
 
   window.addEventListener("scroll", toggleVisibility, { passive: true });
-  // Initialize state
   toggleVisibility();
 }
-
-

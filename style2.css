@@ -161,7 +161,6 @@
     box-shadow: 0 15px 40px rgba(0,0,0,.4);
   }
 
-  /* Enhanced hover effects for story cards */
   .initiative-card {
     position: relative;
     overflow: hidden;
@@ -192,7 +191,6 @@
     color: #8b9cff;
   }
 
-  /* Enhanced hover effects for news cards */
   .update-card {
     position: relative;
     transition: all 0.4s ease;

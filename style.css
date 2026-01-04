@@ -14,7 +14,6 @@
     radial-gradient(circle at bottom right, rgba(129, 140, 248, 0.12), transparent 55%),
     linear-gradient(to bottom right, rgba(15, 23, 42, 0.98), rgba(17, 24, 39, 0.96));
   
-  /* Typography scale */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -24,7 +23,6 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.25rem;
   
-  /* Spacing scale */
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
   --space-md: 1rem;
@@ -36,12 +34,10 @@
   --space-5xl: 5rem;
   --space-6xl: 6rem;
   
-  /* Line heights */
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
 
-  /* PERF/CLS: Keep `main` offset stable vs sticky header height. */
   --header-height: 4.25rem;
 }
 
@@ -107,7 +103,6 @@ button:focus-visible {
   border-radius: 4px;
 }
 
-/* Skip to main content link */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -132,7 +127,6 @@ button:focus-visible {
 }
 
 main {
-  /* PERF/CLS: Use a single source of truth so header height changes don't cause jumpy offsets. */
   padding-top: var(--header-height);
 }
 
@@ -146,12 +140,9 @@ main {
   }
 }
 
-/* PERF: Skip rendering offscreen sections until they are near the viewport. This reduces initial
-   layout/paint work and can improve first load time on long pages. */
 @supports (content-visibility: auto) {
   .section {
     content-visibility: auto;
-    /* Reserve space to avoid scroll jumps while content is skipped. */
     contain-intrinsic-size: 1px 900px;
   }
 }
@@ -253,13 +244,10 @@ main {
   transform: translateY(-1px);
 }
 
-/* NAVBAR */
-
 .site-header {
   position: sticky;
   top: 0;
   z-index: 40;
-  /* PERF/CLS: Reserve header space so font swapping doesn't shift layout. */
   min-height: var(--header-height);
 }
 
@@ -270,7 +258,6 @@ main {
   transition: background-color 220ms ease-out, border-color 220ms ease-out, box-shadow 220ms ease-out;
 }
 
-/* PERF/UX: Prevent anchor jumps from being hidden under the sticky header (no JS needed). */
 section[id],
 footer[id] {
   scroll-margin-top: calc(var(--header-height) + var(--space-md));
@@ -406,8 +393,6 @@ footer[id] {
     outline-offset: 2px;
   }
 }
-
-/* HERO */
 
 .hero {
   position: relative;
@@ -570,8 +555,6 @@ footer[id] {
   }
 }
 
-/* IMPACT SECTION */
-
 .impact {
   background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 1));
   position: relative;
@@ -626,7 +609,6 @@ footer[id] {
   font-size: var(--font-size-3xl);
   font-weight: 700;
   line-height: var(--line-height-tight);
-  /* PERF/CLS: Use tabular numbers + reserve width to reduce layout shift during count-up. */
   font-variant-numeric: tabular-nums;
 }
 
@@ -648,8 +630,6 @@ footer[id] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-/* CARDS & GRIDS */
 
 .card {
   border-radius: var(--radius-lg);
@@ -698,8 +678,6 @@ footer[id] {
   background-color: #020617;
 }
 
-/* INITIATIVES */
-
 .initiatives {
   background: radial-gradient(circle at bottom, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 1));
   position: relative;
@@ -743,8 +721,6 @@ footer[id] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-/* WHO IS THIS FOR */
 
 .audience {
   background: radial-gradient(circle at top, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 1));
@@ -792,8 +768,6 @@ footer[id] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-/* SUCCESS STORY */
 
 .story {
   background: radial-gradient(circle at top, rgba(15, 23, 42, 0.92), rgba(2, 6, 23, 1));
@@ -869,8 +843,6 @@ footer[id] {
   }
 }
 
-/* UPDATES */
-
 .updates {
   background: radial-gradient(circle at bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 1));
   position: relative;
@@ -917,8 +889,6 @@ footer[id] {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
-/* CTA */
 
 .cta {
   background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 1));
@@ -990,8 +960,6 @@ footer[id] {
     max-width: 32rem;
   }
 }
-
-/* FOOTER */
 
 .site-footer {
   background: #020617;
@@ -1118,8 +1086,6 @@ footer[id] {
     align-self: flex-end;
   }
 }
-
-/* SCROLL REVEAL ANIMATIONS */
 
 .reveal-on-scroll {
   opacity: 0;
